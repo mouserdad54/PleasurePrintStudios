@@ -212,7 +212,7 @@ footer {
 
 body.dark-mode {
     background-color: #121212;
-    color: #e0e0e0;
+    color: red;
 }
 
 header.dark-mode, footer.dark-mode {
@@ -220,7 +220,7 @@ header.dark-mode, footer.dark-mode {
 }
 
 nav ul li a.dark-mode {
-    color: #e0e0e0;
+    color: red;
 }
 
 .banner::before {
