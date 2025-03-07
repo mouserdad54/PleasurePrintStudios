@@ -39,7 +39,7 @@ nav ul li a:hover {
 }
 
 button#dark-mode-toggle {
-    background-color: #ff6347;
+    background-color: red;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
