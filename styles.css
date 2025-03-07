@@ -15,7 +15,9 @@ header {
     top: 0;
     z-index: 1000;
 }
+h1 {font-size: x-large;
 
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -35,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff6347;
+    color: red;
 }
 
 button#dark-mode-toggle {
@@ -48,7 +50,7 @@ button#dark-mode-toggle {
 }
 
 button#dark-mode-toggle:hover {
-    background-color: #ff4500;
+    background-color: red;
 }
 
 main {
@@ -58,7 +60,7 @@ main {
 
 @keyframes fadeIn {
     from { opacity: 0; }
-    to { opacity: 1; }
+    to { opacity: 2; }
 }
 
 section {
@@ -94,7 +96,7 @@ section {
 
 .cta-button {
     background-color: #fff;
-    color: #ff6347;
+    color: red;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -188,7 +190,7 @@ footer {
     align-items: center;
 }
 
-.newsletter input[type="email"] {
+.newsletter input[type="pleasureprintstudios@gmail.com"] {
     padding: 0.5rem;
     border: none;
     border-radius: 4px;
