@@ -54,34 +54,6 @@ button#dark-mode-toggle:hover {
     background-color: red;
 }
 
-.carousel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-track {
-    display: flex;
-    width: calc(100% * 4); /* Adjust this based on the number of images */
-    animation: scroll 15s linear infinite;
-}
-
-.carousel-track img {
-    width: 25%;
-    flex-shrink: 0;
-}
-
-.carousel:hover .carousel-track {
-    animation-play-state: paused;
-}
-
-@keyframes scroll{
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-75%); /* Adjust this based on the number of images */
-    }}
 
 main {
     padding: 2rem;
@@ -94,12 +66,12 @@ main {
 }
 
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 20rem;
 }
 
 .banner {
     position: relative;
-    height: 300px;
+    height: 400px;
     background: url('pink\ leather\ wallpaper\ with\ small\ brass\ studs\ resembling\ an\ S&M\ paddle.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -139,17 +111,36 @@ section {
     color: #fff;
 }
 
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-video {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 8px;
+.carousel-track {
+    display: flex;
+    width: calc(100% * 4); /* Adjust this based on the number of images */
+    animation: scroll 15s linear infinite;
 }
+
+.carousel-track img {
+    width: 25%;
+    flex-shrink: 0;
+}
+
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-75%); /* Adjust this based on the number of images */
+    }}
+
 
 .testimonials {
     text-align: center;
