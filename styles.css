@@ -121,11 +121,11 @@ section {
 .carousel-track {
     display: flex;
     width: calc(100% * 5); /* Adjust this based on the number of images */
-    animation: scroll 20s linear infinite;
+    animation: scroll 22s linear infinite;
 }
 
 .carousel-track img {
-    width: 25%;
+    width: 20%;
     height:400px;
     flex-shrink: 0;
 }
