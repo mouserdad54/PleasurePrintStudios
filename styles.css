@@ -96,11 +96,14 @@ section {
 .banner-text h2 {
     margin: 0;
     font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .banner-text p {
     margin: 1rem 0;
     font-size: 1.2rem;
+    color:#00ffff;
+    text-shadow: #121212;
 }
 
 .cta-button {
