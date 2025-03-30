@@ -79,7 +79,7 @@ section {
 .banner {
     position: relative;
     height: 400px;
-    background: url('pink\ leather\ wallpaper\ with\ small\ brass\ studs\ resembling\ an\ S&M\ paddle.png') no-repeat center center/cover;
+    background: url(an\ technicolor\ cartoon\ style\ image\ with\ a\ happy\ sun\,\ a\ few\ happy\ clouds\,\ and\ a\ field\ of\ smiling\ flowers.png) no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,4 +264,8 @@ nav ul li a.dark-mode {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 0;
+}
+
+p {font-size: large;
+font-weight: bolder;
 }
