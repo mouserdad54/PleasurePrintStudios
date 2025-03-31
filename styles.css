@@ -130,13 +130,13 @@ section {
 
 .carousel-track {
     display: flex;
-    width: calc(100% * 5); /* Adjust this based on the number of images */
+    width: calc(30% * 6); /* Adjust this based on the number of images */
     animation: scroll 22s linear infinite;
 }
 
 .carousel-track img {
     width: 20%;
-    height:400px;
+    height:350px;
     flex-shrink: 0;
 }
 
