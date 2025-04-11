@@ -1,16 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Existing Dark Mode Toggle
-    const toggleButton = document.getElementById("dark-mode-toggle");
-    if (toggleButton) {
-        toggleButton.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            document.querySelector("header").classList.toggle("dark-mode");
-            document.querySelector("footer").classList.toggle("dark-mode");
-            document.querySelectorAll("nav ul li a").forEach(link => {
-                link.classList.toggle("dark-mode");
-            });
-        });
+    console.log("Page Loaded: Age Verification should be visible.");
+
+    const ageVerification = document.getElementById("age-verification");
+    const mainContent = document.getElementById("main-content");
+    const yesButton = document.getElementById("yes-btn");
+    const noButton = document.getElementById("no-btn");
+
+    if (!ageVerification || !mainContent || !yesButton || !noButton) {
+        console.error("Error: One or more elements are missing!");
+        return;
     }
+
+    console.log("Elements found successfully, setting initial display states...");
+    ageVerification.style.display = "flex";
+    mainContent.style.display = "none"; // Ensure content starts hidden
+
+    yesButton.addEventListener("click", () => {
+        console.log("User clicked YES - hiding popup & showing content.");
+        ageVerification.style.display = "none"; // This should hide the popup
+        ageVerification.remove(); // This completely removes the element
+        mainContent.style.display = "block"; // This ensures the content is visible
+    });
+    
+    noButton.addEventListener("click", () => {
+        console.log("User clicked NO - redirecting.");
+        alert("You must be 18 or older to enter.");
+        window.location.href = "https://www.google.com";
+    });
+});
+
 
     // Existing Parallax Effect
     window.addEventListener("scroll", () => {
@@ -21,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+
     // Existing Newsletter Form Handling
     const newsletterForm = document.getElementById("newsletter-form");
     if (newsletterForm) {
@@ -29,6 +48,24 @@ document.addEventListener("DOMContentLoaded", () => {
             const email = document.getElementById("newsletter-email").value;
             alert(`Thank you for subscribing with ${email}!`);
             newsletterForm.reset();
+        });
+    }
+
+    // **Age Verification Logic Fix**
+    const ageVerification = document.getElementById("age-verification");
+    const mainContent = document.getElementById("main-content");
+    const yesButton = document.querySelector("#age-verification button:nth-child(1)");
+    const noButton = document.querySelector("#age-verification button:nth-child(2)");
+
+    if (yesButton && noButton) {
+        yesButton.addEventListener("click", () => {
+            ageVerification.style.display = "none";
+            mainContent.style.display = "block";
+        });
+
+        noButton.addEventListener("click", () => {
+            alert("You must be 18 or older to enter.");
+            window.location.href = "https://www.google.com"; // Redirect away
         });
     }
 
@@ -54,4 +91,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setInterval(createSnowflake, 200);
-});

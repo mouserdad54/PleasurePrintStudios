@@ -5,6 +5,31 @@ body {
     box-sizing: border-box;
     transition:  0.3s, color 0.3s;}
 
+    #age-verification {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #age-verification button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    #main-content {
+        display: none; /* Initially hidden until age is verified */
+    }
+
     .snowflakes-container {
         position: fixed;
         top: 0;
@@ -78,23 +103,6 @@ nav ul li a:hover {
     color: red;
 }
 
-button#dark-mode-toggle {
-    background: linear-gradient(to bottom right, #ff00ff, #00ffff); /* Neon gradient */
-    color: #ffffff; /* Button text color */
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff; /* Neon glow */
-    margin: 20px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-button#dark-mode-toggle:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff; /* Enhanced glow */
-}
 
 
 main {
