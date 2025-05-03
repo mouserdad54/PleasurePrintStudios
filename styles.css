@@ -122,7 +122,7 @@ section {
 .banner {
     position: relative;
     height: 400px;
-    background: url(an\ technicolor\ cartoon\ style\ image\ with\ a\ happy\ sun\,\ a\ few\ happy\ clouds\,\ and\ a\ field\ of\ smiling\ flowers.png) no-repeat center center/cover;
+    background: url(Gemini_Generated_Image_hyzq88hyzq88hyzq.jpg) no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,6 +138,8 @@ section {
 
 .banner-text h2 {
     margin: 0;
+    font-weight: bolder;
+    
     font-size: 2.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -145,8 +147,8 @@ section {
 .banner-text p {
     margin: 1rem 0;
     font-size: 1.2rem;
-    color:#00ffff;
-    text-shadow: #121212;
+    color:white;
+    text-shadow:red;
 }
 
 .cta-button {
