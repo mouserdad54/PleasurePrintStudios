@@ -44,7 +44,7 @@ body {
     .snowflake {
         position: absolute;
         top: -10px;
-        background: linear-gradient(to bottom, red, pink);
+        background: linear-gradient(to bottom, red, purple);
         width: 10px;
         height: 10px;
         border-radius: 50%;
