@@ -120,7 +120,6 @@ header {
     ;
 }
 h1 {font-size: xx-large;
-
 }
 nav ul {
     list-style: none;
@@ -234,7 +233,7 @@ section {
 }
 
  .video-section {
-            background-color:lightslategrey;
+            background-color:red;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
