@@ -63,9 +63,50 @@ body {
         }
     }
     
+.newstuff {
+    position: relative;
+    background-color:black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+}
 
+.newstuff-img {
+    width: 100%;
+    height: 100%; /* Make image fill the div */
+    object-fit: cover; /* This works like background-size: cover */
+    object-position: top; /* Adjust if needed (e.g., center top) */
+}
 
-     
+    .shop-now-button {
+    display: inline-block; /* Makes it behave like a block but only take up content width */
+    padding: 12px 25px; /* Adjust padding for size */
+    margin-top: 20px; /* Space above the button */
+    background-color: black; /* Example: A nice black background */
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline from link */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 1.6em; /* Larger font size */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer; /* Indicate it's clickable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.shop-now-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Optional: Active/Clicked State */
+.shop-now-button:active {
+    background-color: #004085; /* Even darker on click */
+    transform: translateY(0); /* Return to original position */
+} 
 
 
 header {
@@ -119,37 +160,7 @@ section {
     margin-bottom: 20rem;
 }
 
-.banner {
-    position: relative;
-    height: 400px;
-    background: url(catwalk.jpg) no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
 
-.banner-text {
-    position: relative;
-    text-align: center;
-    
-    z-index: 1;
-}
-
-.banner-text h2 {
-    margin: 0;
-    font-weight: bolder;
-    
-    font-size: 2.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.banner-text p {
-    margin: 1rem 0;
-    font-size:x-large;
-    color:lightseagreen;
-    text-shadow:2px 2px white
-}
 
 .cta-button {
     background-color: #fff;
@@ -276,7 +287,8 @@ footer {
 .newsletter h3 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    color: #fff;
+    color:black;
+    text-align: center;
 }
 
 .newsletter form {
@@ -293,8 +305,8 @@ footer {
 }
 
 .newsletter button {
-    background-color: #ff6347;
-    color: #fff;
+    background-color: black;
+    color: red;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
