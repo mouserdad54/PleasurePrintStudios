@@ -65,7 +65,7 @@ body {
     
 .newstuff {
     position: relative;
-    background-color:black;
+    background: color #0a0a0a;;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -85,8 +85,8 @@ body {
     display: inline-block; /* Makes it behave like a block but only take up content width */
     padding: 12px 25px; /* Adjust padding for size */
     margin-top: 20px; /* Space above the button */
-    background-color: black; /* Example: A nice black background */
-    color: #ffffff; /* White text color */
+    background-color: #baff39; /* Example: A nice black background */
+    color: #5d5d5d; /* White text color */
     text-decoration: none; /* Remove underline from link */
     border: none; /* Remove default button border */
     border-radius: 5px; /* Slightly rounded corners */
@@ -233,7 +233,7 @@ section {
 }
 
  .video-section {
-            background-color:lightskyblue;
+            background-color:#ff775a;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
