@@ -5,30 +5,7 @@ body {
     box-sizing: border-box;
     transition:  0.3s, color 0.3s;}
 
-    #age-verification {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #age-verification button {
-        margin: 10px;
-        padding: 10px 20px;
-        font-size: 18px;
-        cursor: pointer;
-    }
-    
-    #main-content {
-        display: none; /* Initially hidden until age is verified */
-    }
+
 
     .snowflakes-container {
         position: fixed;
