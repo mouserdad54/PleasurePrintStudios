@@ -21,141 +21,90 @@
    <meta property="og:site_name" content="Pleasure Print Studios">
    <meta property="og:locale" content="en_US">
    <meta property="article:author" content="https://facebook.com/pleasureprintstudios/">
-   
-   <title>Shop Page</title>
-   <link rel="stylesheet" href="styles.css">
-   <link rel="canonical" href="https://pleasureprintstudios.com/shop.html" />     
-
+    <meta http-equiv="refresh" content="10;url=https://www.etsy.com/shop/PleasurePrintStudios">
+    <title>Shop Maintenance - Visit Our Etsy Store!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .redirect-button {
+            background-color: #ff6000; /* Etsy's primary color */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .redirect-button:hover {
+            background-color: #e55600;
+        }
+        .timer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
 </head>
-
 <body>
-  
 
-<div id="main-content" style="display: none;">
+    <div class="container">
+        <h1>🚨 Shop Under Maintenance! 🚨</h1>
+        <p>
+            We are currently performing an emergency update on the Pleasure Prints site. We apologize for any inconvenience!
+        </p>
+        <p>
+            **All of our products are still available!** Please click the button below to be instantly redirected to our fully operational Etsy shop:
+        </p>
 
-    
-</div>
-    
-    <header>
-     
-        <h1>Pleasure Print Studios</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Https://x.com/@pleasure_print">X</a></li>
-                <li><a href="https://instagram.com/pleasureprintstudios/">Instagram</a></li>
-                <li><a href="https://www.tiktok.com/@pleasure.print.studios">TikTok</a></li>
-            </ul>
-        </nav>
-       
-      </header>
-     
-    <div id='collection-component-1742701517808'></div>
-        <script type="text/javascript">
-        /*<![CDATA[*/
-        (function () {
-          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-          if (window.ShopifyBuy) {
-            if (window.ShopifyBuy.UI) {
-              ShopifyBuyInit();
-            } else {
-              loadScript();
+        <a href="https://www.etsy.com/shop/PleasurePrintStudios" class="redirect-button">
+            SHOP NOW ON ETSY!
+        </a>
+
+        <p class="timer">
+            You will be automatically redirected in <span id="countdown">10</span> seconds.
+        </p>
+    </div>
+
+    <script>
+        // JavaScript to update the countdown timer
+        let timeleft = 10;
+        const countdownElement = document.getElementById('countdown');
+
+        const downloadTimer = setInterval(function(){
+            if(timeleft <= 0){
+                clearInterval(downloadTimer);
             }
-          } else {
-            loadScript();
-          }
-          function loadScript() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = scriptURL;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-            script.onload = ShopifyBuyInit;
-          }
-          function ShopifyBuyInit() {
-            var client = ShopifyBuy.buildClient({
-              domain: 'ghagi7-np.myshopify.com',
-              storefrontAccessToken: '71cf575fdbc0c82c54fc41d880fd1cdf',
-            });
-            ShopifyBuy.UI.onReady(client).then(function (ui) {
-              ui.createComponent('collection', {
-                id: '292346757203',
-                node: document.getElementById('collection-component-1742701517808'),
-                moneyFormat: '%24%7B%7Bamount%7D%7D',
-                options: {
-          "product": {
-            "styles": {
-              "product": {
-                "@media (min-width: 601px)": {
-                  "max-width": "calc(25% - 20px)",
-                  "margin-left": "20px",
-                  "margin-bottom": "50px",
-                  "width": "calc(25% - 20px)"
-                },
-                "img": {
-                  "height": "calc(100% - 15px)",
-                  "position": "absolute",
-                  "left": "0",
-                  "right": "0",
-                  "top": "0"
-                },
-                "imgWrapper": {
-                  "padding-top": "calc(75% + 15px)",
-                  "position": "relative",
-                  "height": "0"
-                }
-              }
-            },
-            "text": {
-              "button": "Add to cart"
-            }
-          },
-          "productSet": {
-            "styles": {
-              "products": {
-                "@media (min-width: 601px)": {
-                  "margin-left": "-20px"
-                }
-              }
-            }
-          },
-          "modalProduct": {
-            "contents": {
-              "img": false,
-              "imgWithCarousel": true,
-              "button": false,
-              "buttonWithQuantity": true
-            },
-            "styles": {
-              "product": {
-                "@media (min-width: 601px)": {
-                  "max-width": "100%",
-                  "margin-left": "0px",
-                  "margin-bottom": "0px"
-                }
-              }
-            },
-            "text": {
-              "button": "Add to cart"
-            }
-          },
-          "option": {},
-          "cart": {
-            "text": {
-              "total": "Subtotal",
-              "button": "Checkout"
-            }
-          },
-          "toggle": {}
-        },
-              });
-            });
-          }
-        })();
-        /*]]>*/
-        </script>
-        <script src="scripts.js"></script>
-       
+            countdownElement.innerHTML = timeleft;
+            timeleft -= 1;
+        }, 1000);
+    </script>
+
 </body>
-
-
 </html>
+  
