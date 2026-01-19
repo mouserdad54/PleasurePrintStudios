@@ -1,43 +1,42 @@
-// Existing Parallax Effect
-window.addEventListener("scroll", () => {
-    const bannerText = document.querySelector(".banner-text");
-    if (bannerText) {
-        const scrollPosition = window.pageYOffset;
-        bannerText.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-    }
-});
-
-
-// Existing Newsletter Form Handling
-const newsletterForm = document.getElementById("newsletter-form");
-if (newsletterForm) {
-    newsletterForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const email = document.getElementById("newsletter-email").value;
-        alert(`Thank you for subscribing with ${email}!`);
-        newsletterForm.reset();
-    });
-}
-
-// Existing Snowflake Effect Integration
-// This function creates a single snowflake
+// --- Kawaii Snowflake Effect ---
 function createSnowflake() {
     const container = document.querySelector(".snowflakes-container");
-    if (!container) return; // Exit if the container is not found
+    if (!container) return; 
 
     const snowflake = document.createElement("div");
     snowflake.classList.add("snowflake");
+    
+    // Randomize position and size
+    const size = Math.random() * 10 + 5 + "px";
     snowflake.style.left = Math.random() * window.innerWidth + "px";
-    snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-    snowflake.style.width = snowflake.style.height = Math.random() * 15 + 5 + "px";
-    snowflake.style.background = "linear-gradient(to bottom, red, pink)";
+    snowflake.style.width = size;
+    snowflake.style.height = size;
+    
+    // Use your brand colors: Kawaii Pink and Lime
+    const colors = ['#ff8fa3', '#baff39', '#fdf2f4'];
+    snowflake.style.background = colors[Math.floor(Math.random() * colors.length)];
+    
+    // Randomize fall speed
+    snowflake.style.animationDuration = Math.random() * 3 + 4 + "s"; 
+    snowflake.style.opacity = Math.random();
+
     container.appendChild(snowflake);
 
-    // Removes the snowflake after it's done falling
+    // Remove snowflake after it falls to keep the site fast
     setTimeout(() => {
         snowflake.remove();
-    }, 5000);
+    }, 6000);
 }
 
-// This runs the snowflake creation function at a regular interval
-setInterval(createSnowflake, 200);
+// Start the snow
+setInterval(createSnowflake, 300);
+
+// --- Smooth Scroll for "Shop Now" buttons ---
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
