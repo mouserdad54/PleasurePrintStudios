@@ -104,6 +104,172 @@ nav ul li a:hover { color: var(--kawaii-pink); }
 .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
 .benefit-card { background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); }
 .benefit-number { color: var(--lime-accent); font-size: 1.5rem; margin-bottom: 10px; font-family: 'Fredoka'; }
+.custom-request-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #fff 0%, var(--soft-pink) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.custom-card {
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    border: 2px dashed var(--kawaii-pink); /* Playful 'maker' border */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(255, 143, 163, 0.1);
+}
+
+.custom-text {
+    flex: 2;
+}
+
+.custom-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-bg);
+}
+
+.custom-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.custom-features {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: var(--kawaii-pink);
+    font-size: 0.9rem;
+}
+
+.request-button {
+    display: inline-block;
+    background-color: var(--dark-bg);
+    color: var(--lime-accent); /* High contrast lime on black */
+    padding: 15px 35px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    border: 2px solid var(--dark-bg);
+}
+
+.request-button:hover {
+    background-color: transparent;
+    color: var(--dark-bg);
+    transform: translateY(-3px);
+}
+
+.custom-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-icon {
+    font-size: 5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .custom-card {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+    .custom-features {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.wholesale-badge {
+    display: inline-block;
+    background-color: var(--lime-accent);
+    color: var(--dark-bg);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.custom-card {
+    /* Keep existing styles, but let's ensure the dashed border is thick */
+    border: 3px dashed var(--kawaii-pink);
+    background: linear-gradient(to bottom right, #ffffff, #fffdfd);
+}
+
+.custom-features span {
+    background: var(--soft-pink);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+/* Ensure the button stands out as a professional inquiry tool */
+.request-button {
+    background-color: var(--dark-bg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.request-button:hover {
+    border-color: var(--kawaii-pink);
+    color: var(--kawaii-pink);
+}
+.custom-text h2 {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.custom-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #444; /* Slightly darker for better readability */
+    margin-bottom: 15px;
+}
+
+.sub-p {
+    font-size: 1rem !important;
+    color: #777 !important;
+    font-style: italic;
+}
+
+/* Make the button feel like a conversation starter */
+.request-button {
+    background-color: var(--dark-bg);
+    color: var(--lime-accent);
+    padding: 18px 40px;
+    border-radius: 20px; /* Rounder corners = more friendly */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Fredoka', sans-serif; /* Use the cutesy font for the button too */
+    text-transform: none; /* Keep it casual */
+}
+
+.request-button:hover {
+    background-color: var(--kawaii-pink);
+    border-color: var(--kawaii-pink);
+    color: white;
+}
 
 /* --- Testimonials --- */
 .testimonials { padding: 80px 20px; text-align: center; background: #fafafa; }
