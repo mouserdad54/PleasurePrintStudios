@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Point Google to your sitemap
 Sitemap: https://www.pleasureprintstudios.com/sitemap.xml
