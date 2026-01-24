@@ -388,3 +388,80 @@ footer { padding: 40px 20px; text-align: center; background: var(--dark-bg); col
 .faq-item strong {
     color: var(--kawaii-pink);
 }
+
+/* PPS Promise Section Styling */
+.pps-promise {
+    background-color: #1a1a1a; /* Deep Studio Dark */
+    color: #f4f4f4;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.promise-title {
+    font-size: 2.5rem;
+    color: #ff8c69; /* A soft Peach accent to match your "Peach Perfect" theme */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.promise-subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.promise-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.promise-card {
+    background: #262626;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 280px;
+    border-top: 4px solid #ff8c69; /* The color "pop" at the top of each card */
+    transition: transform 0.3s ease;
+}
+
+.promise-card:hover {
+    transform: translateY(-10px); /* Subtle lift when hovering */
+}
+
+.promise-card h3 {
+    margin-top: 0;
+    color: #ff8c69;
+}
+
+.promise-quote {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: #eee;
+    border-left: none;
+    padding: 0;
+}
+
+.promise-quote span {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #888;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .promise-grid {
+        flex-direction: column;
+    }
+}
