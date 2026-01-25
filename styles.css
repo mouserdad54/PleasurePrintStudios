@@ -8,27 +8,30 @@
     --text-color: #222; /* Darkened from #333 for sharper reading */
 }
 
-/* Update this in your styles.css */
-.valentines-special {
-    background: linear-gradient(135deg, #fff 0%, var(--soft-pink) 100%);
-    border: 3px solid var(--kawaii-pink);
-    border-radius: 40px;
-    padding: 60px 20px;
-    margin: 40px auto;
-    max-width: 1100px;
+.valentines-special .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* This is the key fix for your 'too large' image issue */
-.valentines-special .main-feature-img {
-    max-width: 400px; /* Constrains it to a reasonable size */
+.main-feature-img {
+    max-width: 400px; /* Constraints the large image */
     width: 100%;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    display: block;
-    margin: 0 auto 20px auto;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
 }
 
+/* Mobile fix for Valentine Section */
+@media (max-width: 768px) {
+    .valentines-special .wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 .valentines-special .product-info {
     text-align: center;
 }
