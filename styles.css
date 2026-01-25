@@ -1,9 +1,91 @@
+
 :root {
     --kawaii-pink: #ff8fa3;
+    --dark-pink: #d65a70; /* New: Deeper pink for better readability on light backgrounds */
     --soft-pink: #fdf2f4;
     --lime-accent: #baff39;
     --dark-bg: #1a1a1a;
-    --text-color: #333;
+    --text-color: #222; /* Darkened from #333 for sharper reading */
+}
+
+/* Update this in your styles.css */
+.valentines-special {
+    background: linear-gradient(135deg, #fff 0%, var(--soft-pink) 100%);
+    border: 3px solid var(--kawaii-pink);
+    border-radius: 40px;
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+/* This is the key fix for your 'too large' image issue */
+.valentines-special .main-feature-img {
+    max-width: 400px; /* Constrains it to a reasonable size */
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.valentines-special .product-info {
+    text-align: center;
+}
+
+.valentines-special h2 {
+    color: var(--dark-bg);
+    font-size: 2.5rem;
+}
+
+.edition-label {
+    color: var(--kawaii-pink);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- Fixed Announcement Bar Selector --- */
+/* Note: Added the '.' because it's a class */
+.announcement-bar {
+    background-color: var(--kawaii-pink); 
+    color: var(--dark-bg);
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 10001; /* Higher than header to stay on top */
+    border-bottom: 2px solid var(--lime-accent);
+}
+
+.announcement-bar a {
+    color: var(--dark-bg);
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+/* Mobile Responsiveness for the New Section */
+@media (max-width: 768px) {
+    .valentines-special {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .main-feature-img {
+        max-width: 100%; /* Lets it fill the width on mobile */
+    }
+}
+
+/* Ensure your Hero section doesn't get hidden under the sticky bar */
+body {
+    margin-top: 0; 
 }
 
 body {
