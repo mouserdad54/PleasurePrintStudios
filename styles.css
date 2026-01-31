@@ -209,6 +209,41 @@ nav ul li a:hover { color: var(--kawaii-pink); }
     box-shadow: 0 15px 40px rgba(255, 143, 163, 0.1);
 }
 
+.studio-candles {
+    /* Replace 'flyer-image.jpg' with your actual file path */
+    background-image: url('candlescomingsoon.webp'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust based on your grid size */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.studio-candles:hover {
+    transform: scale(1.02);
+}
+
+.overlay-text {
+    background: rgba(0, 0, 0, 0.6); /* Darkens the background slightly for text readability */
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.preorder-tag {
+    display: inline-block;
+    background-color: #ff00ff; /* Neon pink to match your logo accents */
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 4px;
+}
 .custom-text {
     flex: 2;
 }
