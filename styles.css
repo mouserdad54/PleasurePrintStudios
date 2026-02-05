@@ -1,39 +1,187 @@
 
 :root {
     --kawaii-pink: #ff8fa3;
-    --dark-pink: #d65a70; /* New: Deeper pink for better readability on light backgrounds */
+    --dark-pink: #d65a70;
     --soft-pink: #fdf2f4;
     --lime-accent: #baff39;
     --dark-bg: #1a1a1a;
-    --text-color: #222; /* Darkened from #333 for sharper reading */
+    --text-color: #222;
+    --peach-accent: #ff8c69;
 }
 
+/* --- PERFORMANCE & BEST PRACTICES RESET --- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    background-color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3 { 
+    font-family: 'Fredoka', sans-serif; 
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Accessibility: Ensure buttons/links are easy to tap */
+a, button, .shop-now-button, .request-button {
+    min-width: 44px;
+    min-height: 44px;
+    transition: 0.3s;
+}
+
+/* --- ANNOUNCEMENT BAR --- */
+.announcement-bar {
+    background-color: var(--kawaii-pink); 
+    color: var(--dark-bg);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 10001;
+    border-bottom: 2px solid var(--lime-accent);
+}
+
+.announcement-bar a {
+    color: var(--dark-bg);
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+/* --- HEADER & NAV --- */
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--soft-pink);
+    padding: 1rem 2rem;
+    position: sticky; 
+    top: 0; /* Adjust to 45px if you want it under the bar while scrolling */
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo { font-size: 1.5rem; color: var(--kawaii-pink); font-weight: 600; }
+
+nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+nav ul li a { text-decoration: none; color: #555; font-weight: bold; }
+nav ul li a:hover { color: var(--kawaii-pink); }
+
+/* --- HERO SECTION --- */
+.hero-section {
+    padding: 80px 20px;
+    background: radial-gradient(circle at top right, var(--soft-pink), #fff);
+    text-align: center;
+}
+
+.hero-content h1 { font-size: clamp(2.5rem, 8vw, 3.5rem); line-height: 1.1; margin-bottom: 20px; }
+.highlight { color: var(--kawaii-pink); }
+
+.shop-now-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lime-accent);
+    color: #1a1a1a;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 15px rgba(186, 255, 57, 0.3);
+}
+
+.shop-now-button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 20px rgba(186, 255, 57, 0.4); 
+}
+/* --- BOTANICAL LAB / CANDLES SECTION --- */
+.grid-item.studio-candles {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('candlescomingsoon.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-color: var(--soft-pink); /* Fallback */
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0; /* Ensures overlay text hits the edges */
+    border: 2px solid var(--soft-pink);
+    grid-column: span 2; /* OPTIONAL: Makes it look better in the bento grid */
+}
+
+.studio-candles:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 30px rgba(214, 90, 112, 0.2);
+}
+
+.overlay-text {
+    background: rgba(255, 255, 255, 0.9); /* Light backing for readability */
+    backdrop-filter: blur(5px);
+    color: var(--dark-bg);
+    padding: 25px;
+    width: 100%;
+    border-top: 2px solid var(--kawaii-pink);
+}
+
+.overlay-text h3 {
+    margin: 0 0 5px 0;
+    color: var(--dark-pink);
+    font-size: 1.5rem;
+}
+
+.preorder-tag {
+    display: inline-block;
+    background-color: var(--lime-accent);
+    color: var(--dark-bg);
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+/* --- VALENTINE'S SPECIAL --- */
 .valentines-special .wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 .main-feature-img {
-    max-width: 400px; /* Constraints the large image */
+    max-width: 400px;
     width: 100%;
-    height: auto;
     border-radius: 30px;
     box-shadow: 0 15px 45px rgba(0,0,0,0.1);
-}
-
-/* Mobile fix for Valentine Section */
-@media (max-width: 768px) {
-    .valentines-special .wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-.valentines-special .product-info {
-    text-align: center;
 }
 
 .valentines-special h2 {
@@ -51,57 +199,146 @@
     margin-bottom: 10px;
 }
 
-/* --- Fixed Announcement Bar Selector --- */
-/* Note: Added the '.' because it's a class */
-.announcement-bar {
-    background-color: var(--kawaii-pink); 
-    color: var(--dark-bg);
+/* --- BENTO GRID --- */
+.studio-refresh-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; padding: 40px 20px;
+    max-width: 1200px; margin: 0 auto;
+}
+
+.grid-item { background: var(--soft-pink); border-radius: 30px; padding: 25px; transition: 0.3s; }
+.grid-item:hover { transform: scale(1.02); }
+.flagship-paddle { grid-column: span 2; grid-row: span 2; background: #fff; border: 2px solid var(--soft-pink); }
+.flagship-paddle video { width: 100%; border-radius: 20px; margin-bottom: 15px; }
+
+.price { font-weight: bold; color: var(--kawaii-pink); font-size: 1.4rem; display: block; margin-top: 10px; }
+.badge { background: var(--kawaii-pink); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; display: inline-block;}
+.item-preview { width: 100%; height: auto; border-radius: 15px; margin-top: 10px;}
+
+/* --- BENEFITS --- */
+.benefits-section { background-color: var(--dark-bg); color: white; padding: 80px 20px; }
+.section-title { text-align: center; margin-bottom: 50px; }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.benefit-card { background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); }
+.benefit-number { color: var(--lime-accent); font-size: 1.5rem; margin-bottom: 10px; }
+
+/* --- CUSTOM REQUEST SECTION --- */
+.custom-request-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #fff 0%, var(--soft-pink) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.custom-card {
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    border: 3px dashed var(--kawaii-pink);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(255, 143, 163, 0.1);
+}
+
+.custom-text { flex: 2; }
+.custom-visual { flex: 1; display: flex; justify-content: center; align-items: center; }
+
+.request-button {
+    display: inline-block;
+    background-color: var(--dark-bg);
+    color: var(--lime-accent);
+    padding: 18px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.request-button:hover {
+    background-color: var(--kawaii-pink);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --- CARE GUIDE --- */
+.care-guide {
+    padding: 60px 20px;
+    background-color: var(--soft-pink);
+    border-radius: 50px 50px 0 0;
+}
+
+.care-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.care-card {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
     text-align: center;
-    padding: 12px 0;
-    font-size: 0.95rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    position: sticky;
-    top: 0;
-    z-index: 10001; /* Higher than header to stay on top */
-    border-bottom: 2px solid var(--lime-accent);
+    box-shadow: 0 5px 15px rgba(255, 143, 163, 0.1);
 }
 
-.announcement-bar a {
-    color: var(--dark-bg);
-    text-decoration: underline;
-    margin-left: 10px;
+/* --- CAROUSEL --- */
+.carousel { overflow: hidden; padding: 40px 0; }
+.carousel-track { display: flex; gap: 20px; animation: scroll 40s linear infinite; width: max-content; }
+.carousel-track img { height: 250px; width: 250px; object-fit: cover; border-radius: 20px; }
+
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* --- PPS PROMISE --- */
+.pps-promise {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    padding: 80px 20px;
+    width: 100%; /* Changed from 100vw to 100% for better stability */
+    display: flex;
+    justify-content: center; /* Centers the internal container */
 }
 
-/* Mobile Responsiveness for the New Section */
-@media (max-width: 768px) {
-    .valentines-special {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .main-feature-img {
-        max-width: 100%; /* Lets it fill the width on mobile */
-    }
+.pps-promise .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* This centers the text and the grid */
+    text-align: center;
 }
 
-/* Ensure your Hero section doesn't get hidden under the sticky bar */
-body {
-    margin-top: 0; 
+.promise-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the 3 cards */
+    margin-top: 50px;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    color: var(--text-color);
-    background-color: #fff;
-    overflow-x: hidden;
+.promise-card {
+    background: #262626;
+    padding: 40px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 300px; 
+    max-width: 360px; /* Keeps them from getting too wide on huge screens */
+    border-top: 4px solid var(--peach-accent);
+    text-align: left; /* Keeps the text inside the card professional */
+    display: flex;
+    flex-direction: column;
 }
 
-h1, h2, h3 { font-family: 'Fredoka', sans-serif; }
+.promise-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-/* --- Snowflake Animation --- */
+/* --- SNOWFLAKE ANIMATION --- */
 .snowflakes-container {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -117,471 +354,76 @@ h1, h2, h3 { font-family: 'Fredoka', sans-serif; }
     animation: fall linear infinite;
 }
 
-@keyframes fall {
-    to { transform: translateY(105vh); }
-}
+@keyframes fall { to { transform: translateY(105vh); } }
 
-/* --- Header --- */
-header {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 2px solid var(--soft-pink);
-    padding: 1rem 2rem;
-    position: sticky; top: 0; z-index: 1000;
-}
-
-.header-container {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: center;
-}
-
-.logo { font-size: 1.5rem; color: var(--kawaii-pink); font-weight: 600; }
-
-nav ul { list-style: none; display: flex; gap: 20px; margin: 0; }
-nav ul li a { text-decoration: none; color: #555; font-weight: bold; transition: 0.3s; }
-nav ul li a:hover { color: var(--kawaii-pink); }
-
-/* --- Hero --- */
-.hero-section {
-    padding: 80px 20px;
-    background: radial-gradient(circle at top right, var(--soft-pink), #fff);
-    text-align: center;
-}
-
-.hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
-.highlight { color: var(--kawaii-pink); }
-
-.shop-now-button {
-    display: inline-block;
-    background-color: var(--lime-accent);
-    color: #1a1a1a;
-    padding: 18px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 1.2rem;
-    box-shadow: 0 8px 15px rgba(186, 255, 57, 0.3);
-    transition: 0.3s;
-}
-
-.shop-now-button:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(186, 255, 57, 0.4); }
-
-/* --- Bento Grid --- */
-.studio-refresh-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px; padding: 40px 20px;
-    max-width: 1200px; margin: 0 auto;
-}
-
-.grid-item { background: var(--soft-pink); border-radius: 30px; padding: 25px; transition: 0.3s; }
-.flagship-paddle { grid-column: span 2; grid-row: span 2; background: #fff; border: 2px solid var(--soft-pink); }
-.flagship-paddle video { width: 100%; border-radius: 20px; margin-bottom: 15px; }
-
-.price { font-weight: bold; color: var(--kawaii-pink); font-size: 1.4rem; display: block; margin-top: 10px; }
-.badge { background: var(--kawaii-pink); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; display: inline-block;}
-
-.item-preview { width: 100%; height: auto; border-radius: 15px; margin-top: 10px;}
-
-/* --- Benefits --- */
-.benefits-section { background-color: var(--dark-bg); color: white; padding: 80px 20px; }
-.section-title { text-align: center; margin-bottom: 50px; }
-.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-.benefit-card { background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); }
-.benefit-number { color: var(--lime-accent); font-size: 1.5rem; margin-bottom: 10px; font-family: 'Fredoka'; }
-.custom-request-section {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #fff 0%, var(--soft-pink) 100%);
-    display: flex;
-    justify-content: center;
-}
-
-.custom-card {
-    max-width: 1000px;
-    width: 100%;
-    background: white;
-    padding: 50px;
-    border-radius: 40px;
-    border: 2px dashed var(--kawaii-pink); /* Playful 'maker' border */
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    box-shadow: 0 15px 40px rgba(255, 143, 163, 0.1);
-}
-
-.studio-candles {
-    /* Replace 'flyer-image.jpg' with your actual file path */
-    background-image: url('candlescomingsoon.webp'); 
-    background-size: cover;
-    background-position: center;
-    height: 400px; /* Adjust based on your grid size */
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.studio-candles:hover {
-    transform: scale(1.02);
-}
-
-.overlay-text {
-    background: rgba(0, 0, 0, 0.6); /* Darkens the background slightly for text readability */
-    color: #fff;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.preorder-tag {
-    display: inline-block;
-    background-color: #ff00ff; /* Neon pink to match your logo accents */
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-top: 10px;
-    border-radius: 4px;
-}
-.custom-text {
-    flex: 2;
-}
-
-.custom-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: var(--dark-bg);
-}
-
-.custom-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-.custom-features {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: var(--kawaii-pink);
-    font-size: 0.9rem;
-}
-
-.request-button {
-    display: inline-block;
-    background-color: var(--dark-bg);
-    color: var(--lime-accent); /* High contrast lime on black */
-    padding: 15px 35px;
-    border-radius: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: 0.3s;
-    border: 2px solid var(--dark-bg);
-}
-
-.request-button:hover {
-    background-color: transparent;
-    color: var(--dark-bg);
-    transform: translateY(-3px);
-}
-
-.custom-visual {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.floating-icon {
-    font-size: 5rem;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(10deg); }
-}
-
-/* Responsive Mobile */
-@media (max-width: 768px) {
-    .custom-card {
-        flex-direction: column;
-        padding: 30px;
-        text-align: center;
-    }
-    .custom-features {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-.wholesale-badge {
-    display: inline-block;
-    background-color: var(--lime-accent);
-    color: var(--dark-bg);
-    padding: 4px 12px;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.custom-card {
-    /* Keep existing styles, but let's ensure the dashed border is thick */
-    border: 3px dashed var(--kawaii-pink);
-    background: linear-gradient(to bottom right, #ffffff, #fffdfd);
-}
-
-.custom-features span {
-    background: var(--soft-pink);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.85rem;
-}
-
-/* Ensure the button stands out as a professional inquiry tool */
-.request-button {
-    background-color: var(--dark-bg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.request-button:hover {
-    border-color: var(--kawaii-pink);
-    color: var(--kawaii-pink);
-}
-.custom-text h2 {
-    font-size: 2.8rem;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
-}
-
-.custom-text p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #444; /* Slightly darker for better readability */
-    margin-bottom: 15px;
-}
-
-.sub-p {
-    font-size: 1rem !important;
-    color: #777 !important;
-    font-style: italic;
-}
-
-.care-guide {
-    padding: 60px 20px;
-    background-color: var(--soft-pink);
-    border-radius: 50px 50px 0 0; /* Creates a soft 'hug' effect on the section */
-}
-
-.care-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.care-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.care-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.care-card {
-    background: white;
-    padding: 30px;
-    border-radius: 25px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(255, 143, 163, 0.1);
-}
-
-.care-card:hover {
-    transform: translateY(-5px);
-}
-
-.care-icon {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.care-card h3 {
-    font-size: 1.2rem;
-    color: var(--dark-bg);
-    margin-bottom: 10px;
-}
-
-.care-card p {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
-}
-
-/* Make the button feel like a conversation starter */
-.request-button {
-    background-color: var(--dark-bg);
-    color: var(--lime-accent);
-    padding: 18px 40px;
-    border-radius: 20px; /* Rounder corners = more friendly */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    font-family: 'Fredoka', sans-serif; /* Use the cutesy font for the button too */
-    text-transform: none; /* Keep it casual */
-}
-
-.request-button:hover {
-    background-color: var(--kawaii-pink);
-    border-color: var(--kawaii-pink);
-    color: white;
-}
-
-/* --- Testimonials --- */
-.testimonials { padding: 80px 20px; text-align: center; background: #fafafa; }
-.testimonial-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
-.testimonial-bubble {
-    background: white; padding: 25px; border-radius: 25px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); max-width: 300px;
-    border-bottom: 4px solid var(--soft-pink);
-}
-.review-link { color: var(--kawaii-pink); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--kawaii-pink); }
-
-/* --- Carousel --- */
-.carousel { overflow: hidden; padding: 40px 0; }
-.carousel-track { display: flex; gap: 20px; animation: scroll 40s linear infinite; width: calc(250px * 12); }
-.carousel-track img { height: 250px; width: 250px; object-fit: cover; border-radius: 20px; }
-
-@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-/* --- Footer --- */
+/* --- FOOTER --- */
 footer { padding: 40px 20px; text-align: center; background: var(--dark-bg); color: white; }
-.return-policy { color: var(--lime-accent); text-decoration: none; font-size: 0.9rem; }
 
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
     .studio-refresh-grid { grid-template-columns: 1fr; }
     .flagship-paddle { grid-column: span 1; }
     .hero-content h1 { font-size: 2.5rem; }
-}
-
-.seo-faq {
-    padding: 80px 20px;
-    background-color: #fff;
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-container h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.2rem;
-}
-
-.faq-item {
-    margin-bottom: 30px;
-    border-bottom: 1px solid var(--soft-pink);
-    padding-bottom: 20px;
-}
-
-.faq-item h3 {
-    color: var(--dark-bg);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.faq-item strong {
-    color: var(--kawaii-pink);
-}
-
-/* PPS Promise Section Styling */
-.pps-promise {
-    background-color: #1a1a1a; /* Deep Studio Dark */
-    color: #f4f4f4;
-    padding: 60px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.promise-title {
-    font-size: 2.5rem;
-    color: #ff8c69; /* A soft Peach accent to match your "Peach Perfect" theme */
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.promise-subtitle {
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 40px;
-}
-
-.promise-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.promise-card {
-    background: #262626;
-    padding: 30px;
-    border-radius: 8px;
-    flex: 1;
-    min-width: 280px;
-    border-top: 4px solid #ff8c69; /* The color "pop" at the top of each card */
-    transition: transform 0.3s ease;
-}
-
-.promise-card:hover {
-    transform: translateY(-10px); /* Subtle lift when hovering */
-}
-
-.promise-card h3 {
-    margin-top: 0;
-    color: #ff8c69;
-}
-
-.promise-quote {
-    margin-top: 50px;
-    font-size: 1.5rem;
-    color: #eee;
-    border-left: none;
-    padding: 0;
-}
-
-.promise-quote span {
-    display: block;
-    font-size: 1rem;
-    margin-top: 10px;
-    color: #888;
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
-    .promise-grid {
+    .valentines-special .wrapper, .custom-card {
         flex-direction: column;
+        text-align: center;
+    }
+    header { padding: 1rem; }
+    nav ul { gap: 10px; font-size: 0.9rem; }
+}
+
+/* --- TESTIMONIAL ALIGNMENT REPAIR --- */
+.testimonials {
+    padding: 80px 20px;
+    text-align: center;
+    background: #fafafa;
+    width: 100%;
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 30px; /* Increased gap for breathing room */
+    justify-content: center; /* Centers the bubbles horizontally */
+    align-items: stretch; /* Keeps all bubbles the same height */
+    flex-wrap: wrap; /* Allows them to stack on mobile */
+    max-width: 1200px;
+    margin: 40px auto; /* Centers the entire container on the page */
+}
+
+.testimonial-bubble {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    flex: 1; /* Allows bubbles to grow equally */
+    min-width: 280px; /* Prevents them from getting too skinny */
+    max-width: 350px; /* Prevents them from getting too wide */
+    border-bottom: 4px solid var(--soft-pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left; /* Keeps the quote readable */
+}
+
+.review-link-container {
+    margin-top: 40px;
+}
+
+.review-link {
+    color: var(--dark-pink);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid var(--kawaii-pink);
+    padding-bottom: 2px;
+}
+
+/* Mobile Tweak: Ensure they don't look "shifted" to the left on phones */
+@media (max-width: 768px) {
+    .testimonial-container {
+        padding: 0 10px;
+        gap: 20px;
+    }
+    .testimonial-bubble {
+        max-width: 100%; /* Take full width on mobile */
     }
 }
