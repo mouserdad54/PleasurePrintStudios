@@ -343,18 +343,26 @@ nav ul li a:hover { color: var(--kawaii-pink); }
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     pointer-events: none; z-index: 9999;
+    overflow: hidden; /* Extra safety to prevent scrollbars */
 }
 
 .snowflake {
     position: absolute;
-    top: -10px;
-    background: var(--kawaii-pink);
+    top: -20px; /* Start slightly higher off-screen */
     border-radius: 50%;
-    opacity: 0.6;
-    animation: fall linear infinite;
+    /* Note: Background and Duration are handled by the JS for variety */
+    animation: fall linear forwards; /* CHANGED: 'forwards' instead of 'infinite' */
 }
 
-@keyframes fall { to { transform: translateY(105vh); } }
+/* Ensure the fall animation actually exists */
+@keyframes fall {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(110vh); /* Falls completely off the bottom */
+    }
+}
 
 /* --- FOOTER --- */
 footer { padding: 40px 20px; text-align: center; background: var(--dark-bg); color: white; }

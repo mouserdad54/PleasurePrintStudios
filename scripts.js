@@ -1,42 +1,49 @@
-// --- Kawaii Snowflake Effect ---
-function createSnowflake() {
-    const container = document.querySelector(".snowflakes-container");
-    if (!container) return; 
+// --- High-Performance Kawaii Snowflake Effect ---
+const createSnowflake = () => {
+    const container = document.getElementById("snow-container");
+    if (!container || document.hidden) return; // Stop running if tab is inactive
 
     const snowflake = document.createElement("div");
-    snowflake.classList.add("snowflake");
+    snowflake.className = "snowflake";
     
-    // Randomize position and size
-    const size = Math.random() * 10 + 5 + "px";
-    snowflake.style.left = Math.random() * window.innerWidth + "px";
-    snowflake.style.width = size;
-    snowflake.style.height = size;
-    
-    // Use your brand colors: Kawaii Pink and Lime
+    const size = Math.random() * 10 + 5;
     const colors = ['#ff8fa3', '#baff39', '#fdf2f4'];
-    snowflake.style.background = colors[Math.floor(Math.random() * colors.length)];
     
-    // Randomize fall speed
-    snowflake.style.animationDuration = Math.random() * 3 + 4 + "s"; 
-    snowflake.style.opacity = Math.random();
+    // Apply styles in one go to prevent multiple layout shifts
+    Object.assign(snowflake.style, {
+        left: Math.random() * 100 + "vw",
+        width: size + "px",
+        height: size + "px",
+        background: colors[Math.floor(Math.random() * colors.length)],
+        animationDuration: Math.random() * 3 + 4 + "s",
+        opacity: Math.random()
+    });
 
     container.appendChild(snowflake);
 
-    // Remove snowflake after it falls to keep the site fast
-    setTimeout(() => {
-        snowflake.remove();
-    }, 6000);
+    // Modern cleanup: Listen for the end of the animation instead of a timer
+    snowflake.addEventListener('animationend', () => snowflake.remove(), {once: true});
 }
 
-// Start the snow
-setInterval(createSnowflake, 300);
+// Only spawn snow if the browser isn't struggling
+let lastSnowTime = 0;
+const snowLoop = (timestamp) => {
+    if (timestamp - lastSnowTime > 400) { // Slightly slower interval for better performance
+        createSnowflake();
+        lastSnowTime = timestamp;
+    }
+    requestAnimationFrame(snowLoop);
+}
+requestAnimationFrame(snowLoop);
 
-// --- Smooth Scroll for "Shop Now" buttons ---
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// --- Efficient Smooth Scroll ---
+document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (anchor) {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 });
