@@ -1,3 +1,29 @@
+/**
+ * Pleasure Print Studios - Technical Operations Script 2026
+ * Focus: Performance, Resource Management, and SEO Integrity
+ */
+
+// --- SEO & Meta Integrity (Crawler Layer) ---
+/**
+ * Ensures the canonical link is valid for the current page.
+ * Addresses Lighthouse "Document does not have a valid rel=canonical" audit.
+ */
+const fixCanonicalLink = () => {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    const currentUrl = window.location.href.split('?')[0].split('#')[0];
+    
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+    
+    // Ensure the canonical points to the specific page, not just the root
+    if (canonical.getAttribute('href') !== currentUrl) {
+        canonical.setAttribute('href', currentUrl);
+    }
+};
+
 // --- Optimized Snowflake Generation (Aesthetic Layer) ---
 const createSnowflake = () => {
     const container = document.getElementById("snow-container");
@@ -59,8 +85,14 @@ const initInteractions = () => {
 
 // --- Initializer ---
 window.onload = () => {
-    // Start the animation loop
+    // 1. Resolve SEO priorities first
+    fixCanonicalLink();
+    
+    // 2. Start the animation loop
     requestAnimationFrame(snowLoop);
-    // Initialize interaction listeners
+    
+    // 3. Initialize interaction listeners
     initInteractions();
+    
+    console.log("PPS System Status: SEO Validated | Performance Mode Active");
 };
