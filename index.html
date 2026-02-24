@@ -34,50 +34,233 @@
                 </ul>
             </nav>
         </div>
-        <div class="announcement-bar">
-            <p>💝 Limited Edition Valentine's Drop: The Coquette Bow Paddle is here! 💝</p>
-        </div>
+    <style>
+    /* PERFORMANCE-FIRST CSS */
+    .announcement-bar-pro {
+        --lavender: #b19cd9;
+        --mint: #b2fba5;
+        --pink: #ffb7ce;
+        
+        position: relative;
+        background: #0a0a0a;
+        height: 44px; /* Optimal touch target height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(177, 156, 217, 0.3);
+    }
+
+    /* Subtle gradient glow - zero performance hit */
+    .announcement-bar-pro::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(178, 251, 165, 0.05), transparent);
+        animation: slide 5s linear infinite;
+    }
+
+    .announcement-content {
+        position: relative;
+        z-index: 2;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        letter-spacing: 0.15em;
+        font-weight: 700;
+        color: var(--pink);
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .bat-icon {
+        color: var(--mint);
+        font-size: 18px;
+        will-change: transform;
+        animation: bat-beat 1.5s ease-in-out infinite;
+    }
+
+    /* Hardware-Accelerated Animations */
+    @keyframes bat-beat {
+        0%, 100% { transform: scale(1) translateY(0); }
+        50% { transform: scale(1.2) translateY(-2px); filter: drop-shadow(0 0 5px var(--mint)); }
+    }
+
+    @keyframes slide {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(100%); }
+    }
+
+    .mission-text {
+        color: var(--lavender);
+        font-weight: 400;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+        .mission-text { display: none; } /* Keeps it clean for Mobile CLS scores */
+    }
+</style>
+
+<div class="announcement-bar-pro" role="alert">
+    <div class="announcement-content">
+        <span class="bat-icon" aria-hidden="true">🦇</span>
+        <span>Double the Trouble. <span style="color:#fff;">Twice the Heart.</span></span>
+        <span class="bat-icon" aria-hidden="true">🦇</span>
+        <span class="mission-text">| NEW SPRING PLANTERS ARE LIVE</span>
+    </div>
+</div>
     </header>
 
     <main>
-        <section class="featured-product valentines-special">
-            <div class="wrapper">
-                <div class="product-display">
-                    <picture>
-                        <source srcset="bowpaddle.webp" type="image/webp">
-                        <!-- LCP Image: No lazy loading, fetchpriority high -->
-                        <img src="bowpaddle.webp" alt="Valentine's Coquette Bow Paddle"
-                        class="main-feature-img" width="600" height="600" fetchpriority="high">
-                    </picture>
-                </div>
-                <div class="product-info">
-                    <span class="edition-label">Limited Valentine's Release</span>
-                    <h2>The Coquette Bow Paddle</h2>
-                    <p class="price">$39.99</p>
-                    
-                    <div class="specs-capsule" style="font-size: 0.8rem; color: #888; margin-bottom: 10px;">
-                        <strong>Specs:</strong> Bambu PLA Tough Plus | 3D-Sculpted | Heavy Impact | 130°F Heat Limit
-                    </div>
+       <style>
+    .launch-wrapper {
+        background-color: #0d0d0d;
+        padding: 50px 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
 
-                    <p class="description">
-                        Designed in <strong>Fusion 360</strong> for the perfect balance of seasonal elegance and heavy-impact durability. 
-                        This isn't just a "pretty print"—it's an engineered showpiece.
-                    </p>
-                    
-                    <p class="description">
-                        Featuring a precision-engraved coquette bow and a 3D-sculpted accent, our signature 
-                        <strong>Bambu PLA Tough Plus</strong> material ensures a high-aesthetic finish that survives 
-                        rigorous use. It’s the ultimate "Cutsy-but-Serious" addition to your collection.
-                    </p>
+    .spring-launch-section {
+        background-color: #1a1a1a;
+        color: #f0f0f0;
+        padding: 40px;
+        border: 2px solid #b19cd9; /* Pastel Lavender */
+        border-radius: 25px;
+        max-width: 1100px;
+        margin: 0 auto 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
 
-                    <p style="font-size: 0.9rem; border-left: 2px solid #ffb6c1; padding-left: 10px;">
-                        <em>"Is it durable? Yes. We maintain our own fleet of high-tech printers to ensure 
-                        every Coquette Paddle meets our rigorous internal standards for impact resistance."</em>
-                    </p>
-                </div>
+    .product-image-container {
+        flex: 1;
+        min-width: 320px;
+    }
+
+    .product-image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        border: 4px solid #ffb7ce; /* Kawaii Pink */
+        display: block;
+    }
+
+    .product-text-container {
+        flex: 1.5;
+        min-width: 320px;
+    }
+
+    .promo-header {
+        color: #ffb7ce;
+        font-size: 2.2rem;
+        margin-top: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .launch-badge {
+        background-color: #b19cd9;
+        color: #121212;
+        padding: 5px 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    .highlight-mint {
+        color: #b2fba5; /* Spring Mint */
+        font-weight: bold;
+    }
+
+    .specs-box {
+        background: #252525;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 25px;
+        border: 1px solid #333;
+    }
+
+    .specs-box h4 {
+        margin: 0 0 10px 0;
+        color: #b19cd9;
+        font-size: 1rem;
+    }
+
+    .specs-list {
+        list-style: "🦇 ";
+        padding-left: 20px;
+        margin: 0;
+        color: #ccc;
+        font-size: 0.95rem;
+    }
+
+    .specs-list li {
+        margin-bottom: 8px;
+    }
+
+    /* Responsive flip for the second item */
+    @media (min-width: 768px) {
+        .reverse-row {
+            flex-direction: row-reverse;
+        }
+        .text-right {
+            text-align: right;
+        }
+    }
+</style>
+
+<div class="launch-wrapper">
+
+    <section class="spring-launch-section">
+        <div class="product-image-container">
+            <img src="Belfrie-Besties.webp" alt="Belfrie Bestie Bat Planter">
+        </div>
+        <div class="product-text-container">
+            <span class="launch-badge">Wall Mounted Debut</span>
+            <h2 class="promo-header">Double the Trouble. <br>Twice the Heart.</h2>
+            <p>Introducing the <strong>Belfrie Besties</strong>—a wall-mounted guardian featuring a chubby vampire bat with exposed ribs and a tiny hitchhiking friend. This piece transforms your vertical space into a sanctuary for <span class="highlight-mint">Spanish Lavender</span> cuttings or air plants.</p>
+            
+            <div class="specs-box">
+                <h4>Artisan Specs & Construction:</h4>
+                <ul class="specs-list">
+                    <li>3D Printed with high-durability <strong>PLA Plus</strong>.</li>
+                    <li>Hand-sealed with <strong>Varathane water-based varnish spray</strong>.</li>
+                    <li>Designed to hang flush for a stable, secure fit.</li>
+                    <li>Vegas-bred: Keep indoors and under <span class="highlight-mint">55°C (130°F)</span>.</li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <section class="spring-launch-section reverse-row">
+        <div class="product-image-container">
+            <img src="Nocturne-awaken.webp" alt="Nocturne Awaken Gargoyle Planter">
+        </div>
+        <div class="product-text-container text-right">
+            <span class="launch-badge">New Gargoyle Arrival</span>
+            <h2 class="promo-header">A Guardian Awakens.</h2>
+            <p>The <strong>Nocturne Awaken</strong> is our signature chubby gargoyle guardian. Designed for desks or windowsills, this "Kawaii Goth" protector and his bat companion keep watch over your flora with a touch of midnight charm.</p>
+            
+            <div class="specs-box" style="text-align: left;">
+                <h4>Artisan Specs & Construction:</h4>
+                <ul class="specs-list">
+                    <li>Grounded, wide-base stability for indoor soil setups.</li>
+                    <li>Precision printed in <strong>PLA Plus</strong> with crisp detail.</li>
+                    <li>Finished with an artisan <strong>water-based varnish spray</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
         <section class="hero-section">
             <div class="hero-content">
                 <h1>High Impact. <br><span class="highlight">Higher Aesthetic.</span></h1>
