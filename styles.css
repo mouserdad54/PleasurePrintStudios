@@ -290,7 +290,7 @@ nav ul li a:hover { color: var(--kawaii-pink); }
 
 /* --- CAROUSEL --- */
 .carousel { overflow: hidden; padding: 40px 0; }
-.carousel-track { display: flex; gap: 20px; animation: scroll 40s linear infinite; width: max-content; }
+.carousel-track { display: flex; gap: 20px; animation: scroll 30s linear infinite; width: max-content; }
 .carousel-track img { height: 250px; width: 250px; object-fit: cover; border-radius: 20px; }
 
 @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
