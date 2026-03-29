@@ -21,7 +21,17 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-533FNN3R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="snowflakes-container" id="snow-container"></div>
+<style>
+  /* This makes the bee the default cursor for the whole page */
+  html, body {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size:24px;'><text y='20'>🐝</text></svg>"), auto;
+  }
 
+  /* This makes the bee look like it's "pointing" when hovering over links or buttons */
+  a:hover, button:hover, .node-card:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size:24px;'><text y='20'>🐝</text></svg>"), pointer;
+  }
+</style>
     <header>
         <div class="header-container">
             <div class="logo">🍑 Pleasure Print Studios</div>
