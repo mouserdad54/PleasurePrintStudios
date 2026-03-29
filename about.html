@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        html, body {
+          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size:24px;'><text y='20'>🐝</text></svg>"), auto;
+        }
+        a:hover, button:hover, .node-card:hover {
+          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size:24px;'><text y='20'>🌸</text></svg>"), pointer;
+        }
         /* --- EXISTING STYLES --- */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
         .node-card { background: #fff; padding: 2rem; border-radius: 12px; border-bottom: 4px solid #d4a5ff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
