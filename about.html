@@ -9,57 +9,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "Pleasure Print Studios",
-        "founder": [
-          {
-            "@type": "Person",
-            "name": "Shane",
-            "jobTitle": "Lead Operations & Technical Strategist",
-            "description": "Expert in Fusion 360, Fleet Management, and Additive Manufacturing."
-          },
-          {
-            "@type": "Person",
-            "name": "Alicia",
-            "jobTitle": "Lead Creative & Spiritual Strategist",
-            "description": "Expert in Spiritual Homemaking and Botanical Experimental Chemistry."
-          }
-        ],
-        "nonprofitCategory": "Restorative Justice",
-        "slogan": "The Bridge to Desert Lavender Reentry Farm"
-      }
-    }
-    </script>
-
     <style>
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .node-card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            border-bottom: 4px solid #d4a5ff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .mission-focus {
-            background: #f8f0ff;
-            padding: 3rem;
-            border-radius: 20px;
-            margin-top: 4rem;
-            text-align: center;
-            border: 2px dashed #8a2be2;
-        }
+        /* --- EXISTING STYLES --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+        .node-card { background: #fff; padding: 2rem; border-radius: 12px; border-bottom: 4px solid #d4a5ff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .mission-focus { background: #f8f0ff; padding: 3rem; border-radius: 20px; margin-top: 4rem; text-align: center; border: 2px dashed #8a2be2; }
         .highlight-text { color: #8a2be2; font-weight: 600; }
-        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+        
+        /* --- NEW VISION GALLERY STYLES --- */
+        .vision-gallery { margin-top: 4rem; text-align: center; }
+        .vision-container { 
+            display: grid; 
+            grid-template-columns: 2fr 1fr; 
+            gap: 1.5rem; 
+            margin-top: 2rem;
+        }
+        .main-vision-img { 
+            width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .vision-sidebar { 
+            background: #1a1a1a; 
+            color: #fff; 
+            padding: 2rem; 
+            border-radius: 15px; 
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .progress-bar-bg { background: #333; height: 12px; border-radius: 10px; margin: 15px 0; overflow: hidden; }
+        .progress-bar-fill { background: #d4a5ff; height: 100%; width: 5%; /* Update this as you raise funds */ }
+        
+        .feature-list { list-style: none; padding: 0; font-size: 0.9rem; color: #ccc; }
+        .feature-list li { margin-bottom: 8px; border-left: 2px solid #d4a5ff; padding-left: 10px; }
+
+        @media (max-width: 768px) { 
+            .about-grid, .vision-container { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
@@ -71,6 +60,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="https://www.etsy.com/shop/PleasurePrintStudios">Shop</a></li>
+                    <li><a href="https://ko-fi.com/YOUR_ACCOUNT">Support the Farm</a></li>
                 </ul>
             </nav>
         </div>
@@ -80,9 +70,49 @@
         <section class="intro-section" style="text-align: center; padding: 3rem 0;">
             <h1>Two Studios. <span class="highlight">One Mission.</span></h1>
             <p style="max-width: 600px; margin: auto; font-size: 1.1rem;">
-                Pleasure Print Studios is an decentralized partnership designed to bridge the gap between 
-                high-tech manufacturing and soulful, intentional living.
+                Bridging the gap between high-tech manufacturing and the restorative peace of the desert.
             </p>
+        </section>
+
+        <section class="vision-gallery">
+            <h2 class="highlight-text" style="letter-spacing: 2px; text-transform: uppercase;">
+                The Pleasure Print Studios Campus
+            </h2>
+            <p style="margin-bottom: 2rem; color: #555;">Building a Collaborative Ecosystem for Technology & Desert Horticulture</p>
+            
+            <div class="vision-container">
+                <img src="dreamstudiohome.webp" alt="The Pleasure Print Studios Campus Vision" class="main-vision-img">
+                
+                <div class="vision-sidebar" style="border-left: 4px solid #d4a5ff;">
+                    <h3 style="color: #d4a5ff; margin-bottom: 5px;">COMMUNITY CAMPUS DRIVE</h3>
+                    <p style="font-size: 0.85rem; line-height: 1.4; color: #eee;">
+                        Our $400k goal funds the acquisition of a permanent <strong>Reentry & Maker Campus</strong>. 
+                        A space where returning citizens master high-tech manufacturing and the 
+                        restorative art of desert farming.
+                    </p>
+                    
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 0.75rem; color: #aaa;">CAMPUS ACQUISITION PROGRESS</span>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem;">
+                            <span>$0 RAISED</span>
+                            <span style="color: #d4a5ff;">GOAL: $400,000</span>
+                        </div>
+                    </div>
+                    
+                    <h4 style="margin-top: 25px; font-size: 0.9rem; border-bottom: 1px solid #333; padding-bottom: 5px;">CAMPUS INFRASTRUCTURE</h4>
+                    <ul class="feature-list">
+                        <li><strong>The Tech Foundry:</strong> 3D Print Training Hub</li>
+                        <li><strong>The Botanical Hearth:</strong> Infused Candle Lab</li>
+                        <li><strong>Verdant Acres:</strong> Lavender & Apiary Research</li>
+                        <li><strong>Restorative Housing:</strong> Safe Community Living</li>
+                    </ul>
+                    
+                   
+                </div>
+            </div>
         </section>
 
         <div class="about-grid">
@@ -91,10 +121,8 @@
                 <h3>The Technical Hub</h3>
                 <p><strong>Lead: Shane</strong></p>
                 <p>
-                    With over 10 years of operations management and a self-taught mastery of 
-                    <strong>Fusion 360 and Java</strong>, Shane operates the studio's additive manufacturing fleet. 
-                    Every design is engineered for durability, focusing on high-impact performance and 
-                    thermal safety (maintaining integrity up to <strong>130°F</strong>).
+                    With 10+ years of operations expertise, Shane engineers our fleet of 3D printers. 
+                    Using <strong>Bambu Tough PLA Plus</strong>, he ensures every piece of gear handles the Vegas heat (up to <strong>130°F</strong>).
                 </p>
             </div>
 
@@ -103,10 +131,8 @@
                 <h3>The Botanical Hearth</h3>
                 <p><strong>Lead: Alicia</strong></p>
                 <p>
-                    Alicia brings a lifetime of expertise in the domestic arts and spiritual practice. 
-                    Operating from her research space, she develops our 
-                    <strong>experimental candle recipes</strong> and sensory aftercare line. Her work 
-                    transforms technical gear into tools for ritual and emotional discovery.
+                    Alicia leads our experimental chemistry lab, developing <strong>infused aftercare candles</strong>. 
+                    Her work bridges the sensory gap, preparing our future farm for high-value botanical production.
                 </p>
             </div>
         </div>
@@ -114,20 +140,13 @@
         <section class="mission-focus">
             <h2>The Bridge to <br><span class="highlight-text">Desert Lavender Reentry Farm</span></h2>
             <p style="font-size: 1.2rem; line-height: 1.8;">
-                We don’t just print gear; we cultivate a future. The Majority of our studio's efforts serve as 
-                the financial and operational foundation for our end goal: a <strong>restorative justice 
-                sanctuary</strong> in the Las Vegas desert.
-            </p>
-            <p>
-                Specializing in <strong>Lavandula Grosso</strong> and <strong>Spanish Lavender</strong> 
-                within USDA Zone 9b, the farm will provide a space for empowerment, horticultural 
-                education, and community reentry. Every "Coquette" bow and "Candle" paddle we ship 
-                brings us one acre closer to the harvest.
+                Every purchase brings us one acre closer to the harvest. We are building a 
+                <strong>restorative justice sanctuary</strong> where technology meets the soil.
             </p>
         </section>
     </main>
 
-    <footer style="margin-top: 5rem; text-align: center; padding-bottom: 2rem;">
+    <footer style="margin-top: 5rem; text-align: center; padding-bottom: 2rem; color: #666;">
         <p>&copy; 2026 Pleasure Print Studios | Vegas Made | Fahrenheit Focused</p>
     </footer>
 
