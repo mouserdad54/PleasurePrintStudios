@@ -228,22 +228,6 @@ nav ul li a:hover { color: var(--kawaii-pink); }
     margin-bottom: 10px;
 }
 
-/* --- BENTO GRID --- */
-.studio-refresh-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px; padding: 40px 20px;
-    max-width: 1200px; margin: 0 auto;
-}
-
-.grid-item { background: var(--soft-pink); border-radius: 30px; padding: 25px; transition: 0.3s; }
-.grid-item:hover { transform: scale(1.02); }
-.flagship-paddle { grid-column: span 2; grid-row: span 2; background: #fff; border: 2px solid var(--soft-pink); }
-.flagship-paddle video { width: 100%; border-radius: 20px; margin-bottom: 15px; }
-
-.price { font-weight: bold; color: var(--kawaii-pink); font-size: 1.4rem; display: block; margin-top: 10px; }
-.badge { background: var(--kawaii-pink); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; display: inline-block;}
-.item-preview { width: 100%; height: auto; border-radius: 15px; margin-top: 10px;}
 
 /* --- BENEFITS --- */
 .benefits-section { background-color: var(--dark-bg); color: white; padding: 80px 20px; }
