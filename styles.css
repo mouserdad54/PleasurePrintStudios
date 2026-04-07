@@ -91,34 +91,7 @@ nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
 nav ul li a { text-decoration: none; color: #555; font-weight: bold; }
 nav ul li a:hover { color: var(--kawaii-pink); }
 
-/* --- HERO SECTION --- */
-.hero-section {
-    padding: 80px 20px;
-    background: radial-gradient(circle at top right, var(--soft-pink), #fff);
-    text-align: center;
-}
 
-.hero-content h1 { font-size: clamp(2.5rem, 8vw, 3.5rem); line-height: 1.1; margin-bottom: 20px; }
-.highlight { color: var(--kawaii-pink); }
-
-.shop-now-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--lime-accent);
-    color: #1a1a1a;
-    padding: 18px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 1.2rem;
-    box-shadow: 0 8px 15px rgba(186, 255, 57, 0.3);
-}
-
-.shop-now-button:hover { 
-    transform: translateY(-3px); 
-    box-shadow: 0 12px 20px rgba(186, 255, 57, 0.4); 
-}
 /* --- BOTANICAL LAB / CANDLES SECTION --- */
 .hero-stack {
     display: flex;
