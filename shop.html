@@ -16,20 +16,18 @@
       "@context": "https://schema.org/",
       "@type": "CollectionPage",
       "name": "Pleasure Print Studios Product Catalog",
-      "description": "Artisan 3D printed gear designed in Las Vegas. High-impact paddles and aesthetic jewelry.",
+      "description": "Artisan 3D printed gear and manifestation candles designed in Las Vegas.",
       "url": "https://www.pleasureprintstudios.com/shop.html",
       "mainEntity": {
         "@type": "ItemList",
-        "numberOfItems": 9,
+        "numberOfItems": 6,
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "item": { "@type": "Product", "name": "Coquette Bow Paddle", "offers": { "@type": "Offer", "price": "39.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-          { "@type": "ListItem", "position": 2, "item": { "@type": "Product", "name": "Peach Perfect Paddle", "offers": { "@type": "Offer", "price": "49.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-          { "@type": "ListItem", "position": 3, "item": { "@type": "Product", "name": "Wearable 3D Art", "offers": { "@type": "Offer", "price": "7.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-          { "@type": "ListItem", "position": 4, "item": { "@type": "Product", "name": "Clown Flogger", "offers": { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-          { "@type": "ListItem", "position": 5, "item": { "@type": "Product", "name": "Mermaid Scales Paddle", "offers": { "@type": "Offer", "price": "39.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-          { "@type": "ListItem", "position": 6, "item": { "@type": "Product", "name": "Daisy Chain Paddle", "offers": { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-          { "@type": "ListItem", "position": 7, "item": { "@type": "Product", "name": "Vampire Aesthetic Paddle", "offers": { "@type": "Offer", "price": "39.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-          { "@type": "ListItem", "position": 8, "item": { "@type": "Product", "name": "Honeybee Impact Toy", "offers": { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } }
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Product", "name": "Firey Passion", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Product", "name": "Kismet and Clover", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Product", "name": "Serendipitous Success", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Product", "name": "Nocturne Awaken", "offers": { "@type": "Offer", "price": "39.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Product", "name": "iced rose Jewelry Box", "offers": { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "Product", "name": "Wearable 3D Art", "offers": { "@type": "Offer", "price": "7.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } }
         ]
       }
     }
@@ -38,7 +36,6 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artisan 3D Printed Collection | Pleasure Print Studios</title>
-    <meta name="description" content="Explore our precision-engineered 3D printed gear. High-impact paddles and kawaii accessories designed in Las Vegas. Secure checkout via Etsy.">
     
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -50,22 +47,24 @@
         body { font-family: 'Roboto', sans-serif; margin: 0; background-color: #fff; color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
         header { background: rgba(255, 255, 255, 0.95); padding: 1rem 2rem; border-bottom: 2px solid var(--soft-pink); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1001; }
         .logo { font-family: 'Fredoka', sans-serif; font-size: 1.5rem; color: var(--kawaii-pink); font-weight: 600; }
-        .hero-section { padding: 80px 20px; background: radial-gradient(circle at top right, var(--soft-pink), #fff); text-align: center; }
+        
+        /* FIXED: Hero and Manifestation centering */
+        .hero-section { padding: 80px 20px; background: radial-gradient(circle at top right, var(--soft-pink), #fff); text-align: center; display: flex; flex-direction: column; align-items: center; }
         h1 { font-family: 'Fredoka', sans-serif; font-size: 3rem; margin-bottom: 10px; color: var(--dark-bg); }
         .highlight { color: var(--kawaii-pink); }
+
+        .manifestation-banner { width: 100%; padding: 40px 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .manifest-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; width: 100%; max-width: 1200px; margin: 20px auto; }
+        .manifest-pill { background: white; border: 2px solid var(--soft-pink); border-radius: 50px; padding: 10px 20px; display: flex; align-items: center; gap: 10px; transition: 0.3s ease; }
+        .manifest-pill:hover { border-color: var(--kawaii-pink); transform: translateY(-3px); }
+        .mission-tag { margin-top: 20px; font-family: 'Fredoka'; color: var(--dark-pink); background: var(--soft-pink); padding: 8px 20px; border-radius: 30px; display: inline-block; }
+
         .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1400px; margin: 40px auto; padding: 0 20px; }
         .product-card { background: white; border: 2px solid var(--soft-pink); border-radius: 25px; padding: 25px; text-align: center; transition: 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; height: 100%; box-sizing: border-box; }
-        .product-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); border-color: var(--kawaii-pink); }
         .product-card img { width: 100%; height: 280px; object-fit: cover; border-radius: 18px; margin-bottom: 15px; background: #f9f9f9; }
         .price { color: var(--kawaii-pink); font-weight: bold; font-size: 1.3rem; display: block; margin: 10px 0; }
         .buy-button { display: inline-block; background-color: var(--dark-bg); color: var(--lime-accent); padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; margin-top: auto; }
         footer { padding: 60px 20px; text-align: center; background: var(--dark-bg); color: white; margin-top: 80px; }
-        #backToTop {
-            display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000; 
-            border: none; outline: none; background-color: var(--kawaii-pink); 
-            color: white; cursor: pointer; padding: 10px; border-radius: 50%; 
-            font-size: 24px; width: 60px; height: 60px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
     </style>
 </head>
 <body>
@@ -78,44 +77,32 @@
     <main>
         <section class="hero-section">
             <h1>The <span class="highlight">Artisan Catalog</span></h1>
-            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Precision engineered for high impact. Hand-finished in our Las Vegas lab.</p>
-        </section>
- 
-           
-        </div>
-        <p class="mission-tag">Fueling the <strong>Verdant Reentry Farm</strong> mission with every pour. 🐝</p>
-    </div>
-</section>
-            <div class="product-card custom-request" style="border: 3px dashed var(--kawaii-pink); background: var(--soft-pink);">
-                <div style="font-size: 60px; margin-bottom: 20px;">🎨</div>
-                <h3 style="font-family: 'Fredoka';">Custom STL & Commissions</h3>
-                <p>From custom CAD geometry to personalized aesthetic gear.</p>
-                <span class="price">Starting at $25</span>
-                 <a href="https://tally.so/r/3167GL" class="buy-button" style="background-color: var(--kawaii-pink); color: white;">REQUEST A QUOTE</a>
-            </div>  
-        <div class="catalog-grid">
-             <div class="product-card"><img src="fireypassioncandle.webp" alt="herb candle topsideview"><h3>Firey Passion </h3><span class="price">8oz $16./ 10oz $22.</span><a href="https://www.etsy.com/shop/PleasurePrintStudios?section_id=57939571" class="buy-button">View on Etsy</a></div>
-             <div class="product-card"><img src="Kismetandclover.webp" alt="?"><h3>Kismet and Clover</h3><span class="price">8oz $16. /10oz $22.</span><a href="https://www.etsy.com/shop/PleasurePrintStudios?section_id=57939571" class="buy-button">View on Etsy</a></div>
-             <div class="product-card"><img src="Nocturne-awaken.webp" alt="flower pot in the shape of a vampire bat"><h3>Nocturne Awaken</h3><span class="price">$39.99</span><a href="https://www.etsy.com/shop/PleasurePrintStudios?section_id=57939561" class="buy-button">View on Etsy</a></div>
-             <div class="product-card"><img src="jewelerybox.webp" alt="clear jewelry box pla"><h3>iced rose Jewelry Box</h3><span class="price">$29.99</span><a href="https://www.etsy.com/shop/PleasurePrintStudios" class="buy-button">View on Etsy</a></div>
-             <div class="product-card"><img src="kawaii-3d-printed-earrings-pleasure-print.png" alt="Kawaii Earrings"><h3>Wearable 3D Art</h3><span class="price">$7.99+</span><a href="https://www.etsy.com/shop/PleasurePrintStudios?section_id=57939561" class="buy-button">View on Etsy</a></div>
-             <div class="product-card"><img src="Serendipitous-Success.webp" alt="success focused candle image"><h3>Serendipitous Success</h3><span class="price">8oz $16./ 10oz $22.</span><a href="https://www.etsy.com/shop/PleasurePrintStudios?section_id=57939571" class="buy-button">View on Etsy</a></div>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Functional 3D printed items. Hand-Crafted Infused Candles in our Las Vegas lab.</p>
+            
+            <div class="manifestation-banner">
+                <div class="manifest-container">
+                    <div class="manifest-pill"><span>🍯</span> <strong>LUCK</strong></div>
+                    <div class="manifest-pill"><span>💖</span> <strong>PASSION</strong></div>
+                    <div class="manifest-pill"><span>🛡️</span> <strong>PROTECTION</strong></div>
+                    <div class="manifest-pill"><span>🌱</span> <strong>PEACE</strong></div>
+                </div>
+                <div class="mission-tag">Fueling our <strong>Lavender Farm</strong> Dreams. 🐝</div>
             </div>
+        </section>
+
+        <div class="catalog-grid">
+             <div class="product-card"><img src="fireypassioncandle.webp" alt="Firey Passion Candle"><h3>Firey Passion</h3><span class="price">$22.00</span><a href="https://www.etsy.com/shop/PleasurePrintStudios" class="buy-button">View on Etsy</a></div>
+             <div class="product-card"><img src="Kismetandclover.webp" alt="Kismet and Clover Candle"><h3>Kismet and Clover</h3><span class="price">$22.00</span><a href="https://www.etsy.com/shop/PleasurePrintStudios" class="buy-button">View on Etsy</a></div>
+             <div class="product-card"><img src="Serendipitous-Success.webp" alt="Serendipitous Success Candle"><h3>Serendipitous Success</h3><span class="price">$22.00</span><a href="https://www.etsy.com/shop/PleasurePrintStudios" class="buy-button">View on Etsy</a></div>
+             <div class="product-card"><img src="Nocturne-awaken.webp" alt="Nocturne Awaken Planter"><h3>Nocturne Awaken</h3><span class="price">$39.99</span><a href="https://www.etsy.com/shop/PleasurePrintStudios" class="buy-button">View on Etsy</a></div>
+             <div class="product-card"><img src="jewelerybox.webp" alt="Iced Rose Jewelry Box"><h3>iced rose Jewelry Box</h3><span class="price">$29.99</span><a href="https://www.etsy.com/shop/PleasurePrintStudios" class="buy-button">View on Etsy</a></div>
+             <div class="product-card"><img src="kawaii-3d-printed-earrings-pleasure-print.png" alt="Kawaii Earrings"><h3>Wearable 3D Art</h3><span class="price">$7.99+</span><a href="https://www.etsy.com/shop/PleasurePrintStudios" class="buy-button">View on Etsy</a></div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2026 Pleasure Print Studios | 3D Printed Precision | Las Vegas, NV</p>
     </footer>
 
-    <button id="backToTop" aria-label="Back to top">↑</button>
-
-    <script>
-        const mybutton = document.getElementById("backToTop");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) { mybutton.style.display = "block"; } 
-            else { mybutton.style.display = "none"; }
-        };
-        mybutton.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
-    </script>
 </body>
 </html>
