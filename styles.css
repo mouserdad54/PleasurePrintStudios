@@ -202,12 +202,7 @@ nav ul li a:hover { color: var(--kawaii-pink); }
 }
 
 
-/* --- BENEFITS --- */
-.benefits-section { background-color: var(--dark-bg); color: white; padding: 80px 20px; }
-.section-title { text-align: center; margin-bottom: 50px; }
-.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-.benefit-card { background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); }
-.benefit-number { color: var(--lime-accent); font-size: 1.5rem; margin-bottom: 10px; }
+
 
 /* --- CUSTOM REQUEST SECTION --- */
 .custom-request-section {
