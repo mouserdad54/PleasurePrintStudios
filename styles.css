@@ -22,7 +22,16 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     color: var(--text-color);
-    background-color: #fff;
+    
+    /* 1. Remove background-color: #fff; */
+    
+    /* 2. Add the background image rules below */
+    background-image: url('background-autumn.webp'); /* REPLACE with your actual image filename */
+    background-attachment: fixed; /* Locks the image in place while content scrolls */
+    background-position: center top; /* Centers image horizontally, aligns day at top */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the screen without stretching */
+    
     overflow-x: hidden;
     line-height: 1.6;
 }
