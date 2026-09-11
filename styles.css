@@ -26,7 +26,7 @@ body {
     /* 1. Remove background-color: #fff; */
     
     /* 2. Add the background image rules below */
-    background-image: url('background-autumn.webp'); /* REPLACE with your actual image filename */
+    background-image: url('backygroundie.webp'); /* REPLACE with your actual image filename */
     background-attachment: fixed; /* Locks the image in place while content scrolls */
     background-position: center top; /* Centers image horizontally, aligns day at top */
     background-repeat: no-repeat;
